@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const inter = Inter({
   subsets: ['latin'],
-  variable: 'C',
+  variable: '--font-inter',
 })
 
 export const jakarta = Plus_Jakarta_Sans({
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jakarta.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${jakarta.variable} ${geistSans.variable} ${geistMono.variable} antialiased font-inter`}
       >
         <Navbar/>
         {children}
