@@ -1,0 +1,102 @@
+[
+  {
+    "skuId": "GITA PRESS-1",
+    "title": "Shri Ram Charitmanas",
+    "listing": "ACTIVE",
+    "mrp": 349,
+    "price": 250,
+    "seller": "SELLER",
+    "deliveryTime": 10,
+    "stock": 5,
+    "provider": "SELF",
+    "dimensions": "21.5 x 14 x 2.4 cm",
+    "weight": "1 kg 790 g",
+    "hsnCode": "4901",
+    "images": [
+      "https://m.media-amazon.com/images/I/81t6-HEdHsL.jpg"
+    ],
+    "amazonLink": "https://www.amazon.in/Charitmanas-Ramcharitmanas",
+    "slug": "shri-ram-charitmanas"
+  },
+  {
+    "skuId": "GITA PRESS-2",
+    "title": "Sankshipt Shiv Puran",
+    "listing": "ACTIVE",
+    "mrp": 349,
+    "price": 250,
+    "seller": "SELLER",
+    "deliveryTime": 10,
+    "stock": 5,
+    "provider": "SELF",
+    "dimensions": "19.8 x 12.9 x 2.6 cm",
+    "weight": "1 kg 770 g",
+    "hsnCode": "4901",
+    "images": [
+      "https://m.media-amazon.com/images/I/811wjvJxjmL.jpg",
+      "https://m.media-amazon.com/images/I/816AFg6R79L.jpg"
+    ],
+    "amazonLink": "https://www.amazon.in/Sansept-Shiv-Puran-IN-HINDI",
+    "slug": "sankshipt-shiv-puran"
+  },
+  {
+    "skuId": "GITA PRESS-3",
+    "title": "Vishnu Sahasranama (Hindi)",
+    "listing": "ACTIVE",
+    "mrp": 349,
+    "price": 250,
+    "seller": "SELLER",
+    "deliveryTime": 10,
+    "stock": 5,
+    "provider": "SELF",
+    "dimensions": "13 x 9.5 x 0.2 cm",
+    "weight": "50 g",
+    "hsnCode": "4901",
+    "images": [
+      "https://m.media-amazon.com/images/I/51pGzA-hvqL.jpg",
+      "https://m.media-amazon.com/images/I/61WK0MxaKwL.jpg"
+    ],
+    "amazonLink": "https://www.amazon.in/Vishnu-Sahasranama-Hindi",
+    "slug": "vishnu-sahasranama"
+  },
+  {
+    "skuId": "GITA PRESS-4",
+    "title": "Shrimad Bhagwat Mahapuran",
+    "listing": "ACTIVE",
+    "mrp": 349,
+    "price": 250,
+    "seller": "SELLER",
+    "deliveryTime": 10,
+    "stock": 5,
+    "provider": "SELF",
+    "dimensions": "21.5 x 14 x 1.6 cm",
+    "weight": "1 kg 200 g",
+    "hsnCode": "4901",
+    "images": [
+      "https://m.media-amazon.com/images/I/91-hhpNGJvSL.jpg",
+      "https://m.media-amazon.com/images/I/91zOfnDzV2L.jpg",
+      "https://m.media-amazon.com/images/I/91lKC2XMWjL.jpg"
+    ],
+    "amazonLink": "https://www.amazon.in/-/hi/Gorakhpur",
+    "slug": "shrimad-bhagwat-mahapuran"
+  },
+  {
+    "skuId": "GITA PRESS-5",
+    "title": "Shrimad Bhagwat Geeta Sadhak Sanjivani",
+    "listing": "ACTIVE",
+    "mrp": 349,
+    "price": 250,
+    "seller": "SELLER",
+    "deliveryTime": 10,
+    "stock": 5,
+    "provider": "SELF",
+    "dimensions": "",
+    "weight": "2 kg 230 g",
+    "hsnCode": "4901",
+    "images": [
+      "https://m.media-amazon.com/images/I/61MijgqEH5L.jpg",
+      "https://m.media-amazon.com/images/I/917BJAsOynL.jpg"
+    ],
+    "amazonLink": "",
+    "slug": "bhagwat-geeta-sadhak-sanjivani"
+  }
+]
