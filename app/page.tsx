@@ -1,36 +1,30 @@
+import HeroCarousel from "@/components/common/HeroCarsole";
 import BookCategoriesSection from "@/sections/BookCategoriesSection";
 import Features from "@/sections/Features";
-import GitaPressSection from "@/sections/GitaPressSection";
+import GitaPressSection from "@/sections/ViewBooks";
 import Hero from "@/sections/Hero";
 import HowItWorks from "@/sections/HowItWorks";
-import { BookOpen, Phone, Mail, MessageCircle, ShoppingCart, ShieldCheck, Truck, Star, Users } from "lucide-react";
+import { Phone, Mail, MessageCircle } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import Hero1 from "@/assets/HeroCarsole/hero1.png"
+import Hero2 from "@/assets/HeroCarsole/hero2.png"
+import Hero3 from "@/assets/HeroCarsole/hero3.png"
+import Hero4 from "@/assets/HeroCarsole/hero4.png"
+
+import GeetaPressBook from "@/data/gitaPressBooks.json"
 
 export default function BookForValueLanding() {
+  const images = [
+  Hero1, Hero2, Hero3, Hero4
+];
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      <Hero/>
+      {/* <Hero/> */}
+      <HeroCarousel images={images}/>
+      <GitaPressSection id="geetapressbooks" title="Gita Press Books Collection" description="Collection of most popular spiritual books by Geeta Press" books={GeetaPressBook}/>
       <BookCategoriesSection/>
       <Features/>
       <HowItWorks/>
-      <GitaPressSection/>
-
-
-      {/* Books visual */}
-      <section id="books" className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center">Explore Our Book Collection</h2>
-          <div className="grid md:grid-cols-4 gap-6 mt-14">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <img
-                key={i}
-                src={`https://source.unsplash.com/400x400/?books,study,library&sig=${i}`}
-                className="rounded-2xl object-cover w-full h-56"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Contact */}
       <section id="contact" className="bg-slate-900 text-white py-20">
@@ -42,11 +36,7 @@ export default function BookForValueLanding() {
 
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             <button className="bg-white text-slate-900 px-6 py-3 rounded-xl font-semibold flex items-center gap-2">
-              <Mail className="w-5 h-5" /> support@bookforvalue.com
-            </button>
-
-            <button className="bg-white text-slate-900 px-6 py-3 rounded-xl font-semibold flex items-center gap-2">
-              <Phone className="w-5 h-5" /> Contact Us
+              <Mail className="w-5 h-5" /> info@bookforvalue.com
             </button>
 
             <button className="bg-white text-slate-900 px-6 py-3 rounded-xl font-semibold flex items-center gap-2">
@@ -73,7 +63,7 @@ export default function BookForValueLanding() {
           <div>
             <div className="text-slate-900 font-semibold">Contact</div>
             <ul className="mt-4 space-y-2 text-sm text-slate-600">
-              <li>support@bookforvalue.com</li>
+              <li>info@bookforvalue.com</li>
               <li>bookforvalue.in</li>
               <li>bookforvalue.com</li>
             </ul>

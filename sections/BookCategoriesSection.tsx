@@ -1,16 +1,16 @@
-import BlackSwanImg from "@/assets/blackswan.png"
-import UpscImg from "@/assets/upsc.png"
-import GitaPressImg from "@/assets/gitapress.png"
-import NcertImg from "@/assets/ncert.png"
+import BlackSwanImg from "@/assets/Categories/blackswan.png"
+import UpscImg from "@/assets/Categories/upsc.png"
+import GitaPressImg from "@/assets/Categories/gitapress.png"
+import NcertImg from "@/assets/Categories/ncert.png"
 import Image from "next/image";
 
 function BookCategoriesSection() {
   const categories = [
-    {
-      title: "NCERT Books",
-      img: NcertImg,
-      desc: "Buy NCERT books for classes 6–12 covering science, maths, social studies, and languages. Essential for CBSE and competitive exam preparation.",
-    },
+    // {
+    //   title: "NCERT Books",
+    //   img: NcertImg,
+    //   desc: "Buy NCERT books for classes 6–12 covering science, maths, social studies, and languages. Essential for CBSE and competitive exam preparation.",
+    // },
     {
       title: "UPSC Preparation Books",
       img: UpscImg,
@@ -44,7 +44,7 @@ function BookCategoriesSection() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-10 mt-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-14">
           {categories.map((cat, i) => (
             <div
               key={i}

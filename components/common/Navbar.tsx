@@ -13,10 +13,10 @@ function Navbar() {
         <div className="flex items-center justify-between py-4">
           
           {/* Logo */}
-          <div className="flex items-center gap-2 text-2xl font-bold tracking-tight text-slate-900">
+          <a href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tight text-slate-900">
             <BookOpen className="w-7 h-7 text-slate-800" />
             BookForValue
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10 text-sm font-medium">
@@ -36,9 +36,9 @@ function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3 text-slate-500" >
-            <button className="border border-slate-300 px-5 py-2 rounded-xl text-sm font-semibold hover:bg-slate-200 transition">
+            <a href="#contact" className="border border-slate-300 px-5 py-2 rounded-xl text-sm font-semibold hover:bg-slate-200 transition">
               Contact
-            </button>
+            </a>
             <Link className="bg-slate-900 text-white px-6 py-2 rounded-xl text-sm font-semibold hover:bg-slate-800 transition" href="/books">
               Browse Books
             </Link>
