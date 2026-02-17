@@ -1,10 +1,15 @@
-import BlackSwanImg from "@/assets/Categories/blackswan.png"
-import UpscImg from "@/assets/Categories/upsc.png"
-import GitaPressImg from "@/assets/Categories/gitapress.png"
-import NcertImg from "@/assets/Categories/ncert.png"
+"use client";
+
+import BlackSwanImg from "@/assets/Categories/blackswan.png";
+import UpscImg from "@/assets/Categories/upsc.png";
+import GitaPressImg from "@/assets/Categories/gitapress.png";
+import NcertImg from "@/assets/Categories/ncert.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 function BookCategoriesSection() {
+  const router = useRouter();
+
   const categories = [
     // {
     //   title: "NCERT Books",
@@ -50,7 +55,7 @@ function BookCategoriesSection() {
               key={i}
               className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-md transition flex flex-col"
             >
-              {/* Image wrapper for vertical centering */}
+              {/* Image wrapper */}
               <div className="h-44 flex items-center justify-center bg-white">
                 <Image
                   src={cat.img}
@@ -68,16 +73,20 @@ function BookCategoriesSection() {
                   {cat.desc}
                 </p>
 
-                {/* Ghost Link CTA */}
+                {/* CTA */}
                 <div className="mt-auto flex justify-end">
-                  <a className="mt-5 text-sm font-semibold text-slate-900 bg-white border border-slate-300 px-4 py-1.5 rounded-lg hover:bg-slate-100 transition">
+                  <button
+                    onClick={() => router.push("/books")}
+                    className="mt-5 text-sm font-semibold text-slate-900 bg-white border border-slate-300 px-4 py-1.5 rounded-lg hover:bg-slate-100 transition"
+                  >
                     Order now →
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import ProductCard from "@/components/ProductCard";
+import { useRouter } from "next/navigation";
 
 interface BookSectionProps {
   id?: string;
@@ -15,6 +16,8 @@ export default function BookSection({
   description,
   books,
 }: BookSectionProps) {
+  const router = useRouter();
+
   return (
     <section className="py-14 md:py-20 bg-white" id={id}>
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -48,6 +51,24 @@ export default function BookSection({
           {books.map((book) => (
             <ProductCard key={book.skuId} book={book} />
           ))}
+        </div>
+
+        {/* Explore more button */}
+        <div className="flex justify-center mt-10 md:mt-14">
+          <button
+            onClick={() => router.push("/books")}
+            className="
+              px-7 py-3
+              rounded-full
+              bg-slate-900 text-white
+              font-medium text-sm md:text-base
+              hover:bg-black
+              transition
+              shadow-sm
+            "
+          >
+            Explore more books →
+          </button>
         </div>
 
       </div>
