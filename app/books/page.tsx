@@ -1,40 +1,45 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import books from "@/data/gitaPressBooks.json";
+import books from "@/data/books.json";
 import ProductCard from "@/components/ProductCard";
 
 export default function BooksPage() {
   const [search, setSearch] = useState("");
   const [inStockOnly, setInStockOnly] = useState(false);
   const [maxPrice, setMaxPrice] = useState<number | "">("");
-  const [provider, setProvider] = useState("");
+  const [publisher, setPublisher] = useState("");
 
-  // unique providers from JSON
-  const providers = useMemo(() => {
+  // unique publishers from JSON
+  const publishers = useMemo(() => {
     const set = new Set<string>();
-    books.forEach((b: any) => b.provider && set.add(b.provider));
-    return Array.from(set);
+    books.forEach((b: any) => b.publisher && set.add(b.publisher));
+    return Array.from(set).sort();
   }, []);
 
   // filtering logic
   const filteredBooks = useMemo(() => {
     return books.filter((book: any) => {
       const matchesSearch =
-        book.title.toLowerCase().includes(search.toLowerCase()) ||
-        book.listing.toLowerCase().includes(search.toLowerCase());
+        book.title?.toLowerCase().includes(search.toLowerCase()) ||
+        book.listing?.toLowerCase().includes(search.toLowerCase());
 
       const matchesStock = inStockOnly ? book.stock > 0 : true;
 
       const matchesPrice =
         maxPrice === "" ? true : Number(book.price) <= Number(maxPrice);
 
-      const matchesProvider =
-        provider === "" ? true : book.provider === provider;
+      const matchesPublisher =
+        publisher === "" ? true : book.publisher === publisher;
 
-      return matchesSearch && matchesStock && matchesPrice && matchesProvider;
+      return (
+        matchesSearch &&
+        matchesStock &&
+        matchesPrice &&
+        matchesPublisher
+      );
     });
-  }, [search, inStockOnly, maxPrice, provider]);
+  }, [search, inStockOnly, maxPrice, publisher]);
 
   return (
     <section className="min-h-screen bg-white">
@@ -55,17 +60,21 @@ export default function BooksPage() {
           {/* Filters */}
           <div className="flex gap-2 flex-wrap">
 
+            {/* Publisher filter */}
             <select
-              value={provider}
-              onChange={(e) => setProvider(e.target.value)}
+              value={publisher}
+              onChange={(e) => setPublisher(e.target.value)}
               className="border border-slate-300 rounded-lg px-3 py-2 text-sm"
             >
               <option value="">All Publishers</option>
-              {providers.map((p) => (
-                <option key={p}>{p}</option>
+              {publishers.map((p) => (
+                <option key={p} value={p}>
+                  {p}
+                </option>
               ))}
             </select>
 
+            {/* Max price */}
             <input
               type="number"
               placeholder="Max price"
@@ -76,6 +85,7 @@ export default function BooksPage() {
               className="w-28 border border-slate-300 rounded-lg px-3 py-2 text-sm"
             />
 
+            {/* In stock */}
             <label className="flex items-center gap-2 text-sm px-2">
               <input
                 type="checkbox"

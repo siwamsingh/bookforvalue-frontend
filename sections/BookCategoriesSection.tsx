@@ -1,34 +1,30 @@
-"use client";
 
 import BlackSwanImg from "@/assets/Categories/blackswan.png";
 import UpscImg from "@/assets/Categories/upsc.png";
 import GitaPressImg from "@/assets/Categories/gitapress.png";
-import NcertImg from "@/assets/Categories/ncert.png";
+
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 function BookCategoriesSection() {
-  const router = useRouter();
 
   const categories = [
-    // {
-    //   title: "NCERT Books",
-    //   img: NcertImg,
-    //   desc: "Buy NCERT books for classes 6–12 covering science, maths, social studies, and languages. Essential for CBSE and competitive exam preparation.",
-    // },
     {
       title: "UPSC Preparation Books",
       img: UpscImg,
+      link: "/books",
       desc: "Shop UPSC books for GS, optional subjects, and current affairs used by IAS and civil services aspirants across India.",
     },
     {
       title: "Gita Press Books",
       img: GitaPressImg,
+      link: "/publisher/gita-press",
       desc: "Authentic Bhagavad Gita and spiritual books for philosophy, learning, and personal growth.",
     },
     {
       title: "Blackie & Orient Publisher Books",
       img: BlackSwanImg,
+      link: "/publisher/orient-black-swan",
       desc: "Academic and reference books from trusted publishers used in schools and colleges across India.",
     },
   ];
@@ -42,29 +38,33 @@ function BookCategoriesSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Book Categories Available at BookForValue
           </h2>
+
           <p className="mt-4 text-slate-600 text-sm">
-            Buy NCERT, UPSC, NEET, and JEE preparation books, spiritual books,
-            and academic titles at affordable prices across India.
+            Buy UPSC preparation books, spiritual classics, and academic titles
+            at affordable prices across India.
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-14">
-          {categories.map((cat, i) => (
+
+          {categories.map((cat) => (
             <div
-              key={i}
+              key={cat.title}
               className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-md transition flex flex-col"
             >
-              {/* Image wrapper */}
+              {/* Image */}
               <div className="h-44 flex items-center justify-center bg-white">
                 <Image
                   src={cat.img}
                   alt={cat.title}
-                  className="max-h-full w-auto object-cover"
+                  className="max-h-full w-auto object-contain"
                 />
               </div>
 
+              {/* Content */}
               <div className="p-6 flex flex-col flex-1">
+
                 <h3 className="text-lg font-semibold text-slate-900">
                   {cat.title}
                 </h3>
@@ -75,18 +75,19 @@ function BookCategoriesSection() {
 
                 {/* CTA */}
                 <div className="mt-auto flex justify-end">
-                  <button
-                    onClick={() => router.push("/books")}
+                  <Link
+                    href={cat.link}
                     className="mt-5 text-sm font-semibold text-slate-900 bg-white border border-slate-300 px-4 py-1.5 rounded-lg hover:bg-slate-100 transition"
                   >
-                    Order now →
-                  </button>
+                    Explore Books →
+                  </Link>
                 </div>
+
               </div>
             </div>
           ))}
-        </div>
 
+        </div>
       </div>
     </section>
   );
