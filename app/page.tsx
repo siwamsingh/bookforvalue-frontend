@@ -16,10 +16,10 @@ export default function BookForValueLanding() {
   const images = [Hero1, Hero2, Hero3, Hero4];
 
   const popularSlugs = [
-    "r-bhaktaml-with-bhaktisabodhini-k-by-r-priydsaj-orlanguage-hindi-orsize-large-orcode-2066",
-    "all-books-and-handicrafts-vishnu-sahastranam-stotram-gita-press-code-1801-by-gita-press-gorakhpur",
-    "gita-press-gorakhpur-shrimadbhagvadgita-with-hindi-commentary-bold-fonts-along-with-medium-size-book-covercode-502",
-    "shri-shiv-maha-puran-part-1-and-2combo-pack-sachitra-mool-sanskrit-shloka-hindi-vyakhya-sahit-gita-press",
+    "r-bhaktaml-with-bhaktisabodhini-k-by-r-priydsaj-orlanguage-hindi-orsize-large-or",
+    "all-books-and-handicrafts-vishnu-sahastranam-stotram-gita-press-code-1801-by-git",
+    "gita-press-gorakhpur-shrimadbhagvadgita-with-hindi-commentary-bold-fonts-along-w",
+    "shri-shiv-maha-puran-part-1-and-2combo-pack-sachitra-mool-sanskrit-shloka-hindi",
     "mahabharat-part-1-6-in-hindi-by-gita-press-gorakhpur-new-edition",
   ];
 
