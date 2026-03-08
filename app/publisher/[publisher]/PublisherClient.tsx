@@ -12,7 +12,7 @@ type Book = {
   stock: number;
   publisher?: string;
   amazonLink?: string;
-  images?: string[];
+  images?: { image_url: string; is_default: boolean; }[];
 };
 
 export default function PublisherClient({
